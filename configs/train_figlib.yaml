@@ -1,0 +1,19 @@
+model:
+  weights: yolo11n.pt
+data:
+  # 由 scripts/prepare_figlib.py 生成（含绝对路径，指向 data/yolo）
+  yaml: data/yolo/data.yaml
+train:
+  epochs: 100
+  imgsz: 640
+  # 8GB 显存但桌面程序已占用约 2.4GB，实测 batch 16 会 CUDA OOM，8 是安全值
+  batch: 8
+  patience: 30
+  name: figlib_smoke_v11n
+  project: runs/detect
+  device: "0"
+  # 本机 16GB RAM，cache='ram' + 多 worker 解码大图会把提交内存吃光，
+  # 触发 DataLoader 里的 cv2 OutOfMemoryError，因此这里关缓存并把 worker 降到 2
+  workers: 2
+  amp: true
+  cache: false

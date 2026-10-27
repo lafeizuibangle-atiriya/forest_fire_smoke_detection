@@ -1,0 +1,22 @@
+# 运行时依赖（版本锁定，安装时用国内镜像）
+# 注意：PyPI 上 Windows 的 torch 只提供 CPU 构建。
+# 要用 GPU，按 README「用显卡跑」一节改装 +cu121 版本：
+#   torch==2.4.1+cu121  torchvision==0.19.1+cu121
+ultralytics==8.3.40
+torch==2.4.1
+torchvision==0.19.1
+opencv-python==4.10.0.84
+numpy==1.26.4
+pydantic==2.9.2
+fastapi==0.115.4
+uvicorn[standard]==0.32.0
+python-dotenv==1.0.1
+pyyaml==6.0.2
+python-multipart==0.0.12
+
+# 开发工具
+ruff==0.7.4
+black==24.10.0
+mypy==1.11.2
+pytest==8.3.3
+pre-commit==3.8.0

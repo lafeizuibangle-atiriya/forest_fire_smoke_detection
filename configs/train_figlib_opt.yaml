@@ -1,0 +1,24 @@
+model:
+  weights: yolo11n.pt
+data:
+  yaml: data/yolo/data.yaml
+train:
+  # 优化版：imgsz 提到 960（EDA 显示目标相对宽度中位仅 6.3%，
+  # 640 下小目标只剩约 8px 不可见），增强针对小目标加强
+  epochs: 80
+  imgsz: 960
+  # 960 下显存约为 640 的 2.25 倍，batch 4 ≈ 640/batch9，接近本机 8GB 上限
+  # （5 轮探测确认不 OOM，约 20s/epoch）
+  batch: 4
+  patience: 20
+  name: figlib_smoke_v11n_opt
+  project: runs/detect
+  device: "0"
+  workers: 2
+  amp: true
+  cache: false
+  # ---- 针对小目标的增强组合 ----
+  mosaic: 1.0
+  copy_paste: 0.2
+  scale: 0.7
+  mixup: 0.1

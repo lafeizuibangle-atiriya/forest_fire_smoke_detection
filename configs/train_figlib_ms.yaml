@@ -1,0 +1,24 @@
+model:
+  weights: yolo11n.pt
+data:
+  yaml: data/yolo/data.yaml
+train:
+  # v4：multi_scale 多尺度训练。
+  # 依据：EDA 显示目标宽度跨度 28 倍（24px~668px），固定 imgsz 无法兼顾；
+  # multi_scale 让每个 batch 的 imgsz 在 480~1440 间随机波动。
+  # 显存按峰值 1440 估算，batch 2 ≈ 640/batch10，安全。
+  epochs: 60
+  imgsz: 960
+  batch: 2
+  patience: 15
+  name: figlib_smoke_v11n_ms
+  project: runs/detect
+  device: "0"
+  workers: 2
+  amp: true
+  cache: false
+  multi_scale: true
+  mosaic: 1.0
+  copy_paste: 0.3
+  scale: 0.7
+  mixup: 0.1

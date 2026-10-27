@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: Forest Fire Smoke Detection (YOLO prototype)
+message: If you use this project, please cite it.
+type: software
+authors:
+  - family-names: "万"
+    given-names: "钰峻"
+    website: "https://github.com/lafeizuibangle-atiriya"
+date-released: "2026-10-27"
+license: AGPL-3.0

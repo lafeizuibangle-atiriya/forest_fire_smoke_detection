@@ -1,0 +1,19 @@
+model:
+  weights: yolo11n.pt
+data:
+  yaml: data/yolo/data.yaml
+train:
+  # 第二组实验：只改输入分辨率（640 -> 800），其余保持不变，
+  # 用于验证"早期远距离淡烟漏检"是否为小目标问题
+  epochs: 60
+  imgsz: 800
+  # 每 epoch 迭代数翻倍 + 分辨率提高，batch 必须降到 4 才能稳在显存内
+  # （ultralytics 会用 nbs=64 自动累积梯度，等效 batch 仍是 64）
+  batch: 4
+  patience: 20
+  name: figlib_smoke_v11n_800
+  project: runs/detect
+  device: "0"
+  workers: 2
+  amp: true
+  cache: false

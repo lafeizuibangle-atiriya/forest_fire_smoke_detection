@@ -1,0 +1,22 @@
+                    GNU AFFERO GENERAL PUBLIC LICENSE
+                       Version 3, 19 November 2007
+
+本项目采用 GNU Affero 通用公共许可证 v3.0（AGPL-3.0）授权。
+
+完整许可证文本请访问：
+    https://www.gnu.org/licenses/agpl-3.0.txt
+
+【为什么是 AGPL，而不是 MIT】
+本项目依赖 Ultralytics YOLO（`ultralytics` 包及其预训练权重），
+其官方授权为 AGPL-3.0。AGPL 是强 copyleft 协议：当你**公开分发**
+本项目、或**以网络服务形式**对外提供本项目时，需要以 AGPL-3.0
+开源整个项目，并向使用者提供对应源码。
+
+- 用于个人作品集、公开 GitHub/Gitee 仓库：本 AGPL-3.0 授权即可合规。
+- 如果将来要闭源商用：需向 Ultralytics 购买商业授权，或改用
+  宽松授权（Apache-2.0 / MIT）的检测后端并重新训练自有模型。
+
+【重要】发布前请把本文件替换为 AGPL-3.0 的完整文本
+（见上方链接），本文件仅为占位说明。
+
+Copyright (c) 2026 <Your Name>

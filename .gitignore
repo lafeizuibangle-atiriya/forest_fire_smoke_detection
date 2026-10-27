@@ -1,0 +1,46 @@
+# ---- 数据与训练输出（绝不入库）----
+data/
+results/
+runs/
+# 权重一律不入库：预训练权重从镜像下载，自训练权重走 Release 附件
+*.pt
+*.onnx
+*.engine
+*.om
+
+# ---- 本地安装临时文件 ----
+_wheels/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- 环境变量与密钥 ----
+.env
+.env.*
+!.env.example
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# ---- 日志与临时 ----
+*.log
+_*.txt
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 含原始影像的本地素材（授权原因不入库）----
+_local_assets/

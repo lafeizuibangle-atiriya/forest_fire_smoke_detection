@@ -1,0 +1,16 @@
+model:
+  weights: yolo11n.pt
+data:
+  yaml: configs/forest_fire.yaml
+train:
+  epochs: 200
+  imgsz: 640
+  # RTX 4060 Laptop 8GB：YOLO11n + imgsz 640 + AMP 下 batch 16 约占用 4~5GB 显存
+  batch: 16
+  patience: 30
+  name: forest_smoke_v11n
+  # "0" = 使用第一块 GPU；改成 "cpu" 可回退到 CPU 训练
+  device: "0"
+  workers: 8
+  amp: true
+  cache: false

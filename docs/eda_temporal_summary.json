@@ -1,0 +1,31 @@
+{
+  "boxes": 309,
+  "sequences": 9,
+  "annotation_start": "annotations begin at T+0 (plume-appearance frame) by design",
+  "first_box_area_px2": {
+    "median": 900.0,
+    "min": 384,
+    "max": 3680,
+    "per_seq": {
+      "20160604_FIRE_rm-n-mobo-c": 638,
+      "20160604_FIRE_smer-tcs3-mobo-c": 2176,
+      "20160619_FIRE_lp-e-iqeye": 532,
+      "20160619_FIRE_om-e-mobo-c": 616,
+      "20160619_FIRE_pi-s-mobo-c": 3680,
+      "20160711_FIRE_ml-n-mobo-c": 2108,
+      "20160718_FIRE_lp-n-iqeye": 900,
+      "20160718_FIRE_mg-s-iqeye": 384,
+      "20160718_FIRE_mw-e-mobo-c": 1944
+    }
+  },
+  "first_box_rel_width_pct": {
+    "median": 2.08,
+    "min": 1.37
+  },
+  "area_growth": {
+    "t_0_15min": 2842.0,
+    "t_15_30min": 9424.0,
+    "t_30_45min": 12648.0,
+    "t_gt_45min": NaN
+  }
+}

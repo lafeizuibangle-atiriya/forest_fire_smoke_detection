@@ -1,0 +1,34 @@
+[project]
+name = "forest_fire_smoke_detection"
+version = "0.1.0"
+description = "基于 YOLO 的森林火灾烟雾识别与预警原型系统"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "AGPL-3.0-only" }
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"

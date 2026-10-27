@@ -1,0 +1,25 @@
+model:
+  # 自训练（self-training）：从 v3 权重初始化，而不是从 COCO 预训练的
+  # yolo11n.pt 重新开始。教师已经知道"烟长什么样"，学生只需要在扩充后的
+  # 数据分布上重新校准，收敛比从头训快得多。
+  weights: models/best.pt
+data:
+  yaml: data/yolo_pseudo/data.yaml
+train:
+  # 数据量约翻倍（GT 437 + 伪标签帧），每 epoch 时间也翻倍，
+  # 但监督信号更强，60 epoch 足够；不足时用 --resume 续训。
+  epochs: 60
+  imgsz: 960
+  batch: 4
+  patience: 20
+  name: figlib_smoke_v11n_pseudo
+  project: runs/detect
+  device: "0"
+  workers: 2
+  amp: true
+  cache: false
+  # 与 v3 保持完全一致，保证唯一变量是"数据"（消融纪律）
+  mosaic: 1.0
+  copy_paste: 0.2
+  scale: 0.7
+  mixup: 0.1
