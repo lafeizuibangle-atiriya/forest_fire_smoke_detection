@@ -6,10 +6,13 @@
   **GitHub Releases 附件**下载，放入本目录。
 - **预训练权重**（`yolo11n.pt`，Ultralytics AMP 自检需要，放项目根目录）：
 
-  ```powershell
-  curl.exe -L -4 -o yolo11n.pt `
-    "https://ghfast.top/https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt"
+  ```bash
+  curl -L -o yolo11n.pt \
+    https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt
   ```
+
+  国内直连慢时可用 GitHub 资产镜像前缀（第三方服务，可用性自担）：
+  `https://ghfast.top/<原始URL>`。
 
 权重来源说明：v3 / v5 均为 YOLO11n 在 FIgLib 官方标注（+ v5 伪标签回灌）上训练，
 训练配置见 `configs/train_figlib_opt.yaml` 与 `configs/train_figlib_pseudo.yaml`，

@@ -1,8 +1,0 @@
-# YOLO 数据集配置。
-# 先运行 scripts/fetch_data.py 获取原始数据，整理成下列结构后再训练。
-path: ./data/yolo
-train: images/train
-val: images/val
-names:
-  0: smoke
-  1: fire

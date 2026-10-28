@@ -1,7 +1,7 @@
 model:
   weights: yolo11n.pt
 data:
-  yaml: configs/forest_fire.yaml
+  yaml: data/yolo/data.yaml
 train:
   epochs: 200
   imgsz: 640
