@@ -29,7 +29,7 @@ cd D:\Code\forest_fire_smoke_detection
 ## 镜像与代理
 
 - pip 镜像：阿里云 `https://mirrors.aliyun.com/pypi/simple/`（用 `pip config --site set` 写入）
-- **代理坑**：本机 `HTTP_PROXY/HTTPS_PROXY` 曾指向失效的 `127.0.0.1:4279`，会让 pip 报
+- **代理问题**：本机 `HTTP_PROXY/HTTPS_PROXY` 曾指向失效的 `127.0.0.1:4279`，会让 pip 报
   `ProxyError ... 502 Bad Gateway`。遇到时先清掉再装：
 
 ```powershell
@@ -80,7 +80,7 @@ pip install --no-deps torch-2.4.1+cu121-cp312-cp312-win_amd64.whl `
                     torchvision-0.19.1+cu121-cp312-cp312-win_amd64.whl
 ```
 
-### 两个卸载/安装坑
+### 卸载/安装的两个问题
 
 1. **`pip install --force-reinstall` 会失败**：pip 卸载旧 torch 时把文件移到 `C:\...\Temp`，
    而 venv 在 D 盘 → `OSError [WinError 17] 系统无法将文件移到不同的磁盘驱动器`。
