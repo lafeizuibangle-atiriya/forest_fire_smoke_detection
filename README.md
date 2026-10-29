@@ -11,8 +11,8 @@
 [![GPU](https://img.shields.io/badge/Tested%20on-RTX%204060%20Laptop-76B900?logo=nvidia&logoColor=white)]()
 
 *火情前全程静默 → 烟羽出现连续命中 → 触发告警（滑动窗口投票，3 帧内 ≥2 帧命中）。
-效果演示动图与逐帧案例见 [docs/训练评估报告.md](docs/训练评估报告.md) 与 [docs/技术决策复盘.md](docs/技术决策复盘.md)；
-因 FIgLib 数据授权限制（CC BY-NC-ND），本仓库不含任何原始摄像头画面。*
+检测对比图与逐帧动图因 FIgLib 数据授权（CC BY-NC-ND）不入仓库，生成方式见
+[docs/训练评估报告.md](docs/训练评估报告.md) 第 5 节；完整实验记录见 [docs/技术决策复盘.md](docs/技术决策复盘.md)。*
 
 </div>
 
